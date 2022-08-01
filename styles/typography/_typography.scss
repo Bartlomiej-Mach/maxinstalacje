@@ -1,0 +1,94 @@
+// Sizes
+
+
+$font-h1-desktop: 8rem;
+$font-h1-mobile: 4rem;
+
+$font-h2-desktop: 5rem;
+$font-h2-mobile: 3rem;
+
+$font-h3-desktop: 3rem;
+$font-h3-mobile: 2rem;
+
+$font-text: 2rem;
+$font-text-mobile: 1.6rem;
+
+// Weight
+
+$font-light: 300;
+$font-bold: 700;
+
+// font family
+
+$font-montserrat: 'Montserrat', sans-serif;
+
+
+// baisic typography
+html { 
+    font-size: 10px; 
+}
+body {
+    font-family: $font-montserrat;
+}
+
+h1 {
+    font-size: $font-h1-desktop;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    @include break-point-down(mb) {
+        font-size: $font-h1-mobile;
+    }
+}
+
+h2 {
+    font-size: $font-h2-desktop;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    color: $color-orange;
+    @include break-point-down(mb) {
+        font-size: $font-h2-mobile;
+    }
+}
+
+h3 {
+    font-size: $font-h3-desktop;
+    font-weight: $font-bold;
+    @include break-point-down(mb) {
+        font-size: $font-h3-mobile;
+    }
+}
+h5 {
+    font-size: $font-h1-desktop;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+    line-height: $font-h1-desktop;
+    @include break-point-down(mb) {
+        font-size: $font-h1-mobile;
+        line-height: $font-h1-mobile;
+    }
+}
+
+span, p {
+    font-size: $font-text;
+    @include break-point-down(mb) {
+        font-size: $font-text-mobile;
+    }
+}
+
+a {
+    text-decoration: none;
+    font-size: $font-text;
+    font-weight: $font-bold;
+    @include break-point-down(mb) {
+        font-size: $font-text-mobile;
+    }
+}
+
+button {
+    font-size: $font-text;
+    font-weight: $font-bold;
+    font-family: $font-montserrat;
+    @include break-point-down(mb) {
+        font-size: $font-text-mobile;
+    }
+}

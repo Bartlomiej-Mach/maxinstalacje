@@ -1,0 +1,31 @@
+$breakpoints: (
+
+    lg: 1300px,
+    md: 1024px,
+    824: 824px,
+    mb: 700px,
+    400: 400px,
+
+);
+
+
+@mixin break-point-down($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+
+// styles for containers
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 25px;
+    position: relative;
+    @include break-point-down(mb) {
+        padding: 0 15px;
+    }
+}

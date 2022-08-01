@@ -1,0 +1,26 @@
+.btn-primary {
+    width: fit-content;
+    padding: 8px 15px;
+    background-color: $color-orange;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    span {
+        margin: 0 5px 0 0;
+        text-transform: uppercase;
+    }
+    svg {
+        transition: .2s;
+    }
+    &:hover svg {
+        transform: translateX(4px);
+    }
+}
+.btn-primary.white-bg {
+    background-color: $color-white;
+    color: $color-dark;
+    svg path {
+        fill: $color-dark;
+    }
+}

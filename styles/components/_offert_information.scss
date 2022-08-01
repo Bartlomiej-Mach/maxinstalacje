@@ -1,0 +1,302 @@
+.offert-information {
+    width: 100%;
+    background-color: $color-light-white;
+    &-content {
+        display: flex;
+        justify-content: flex-end;
+        max-width: 1920px;
+        margin: 0 auto;
+        &__text {
+            max-width: 660px;
+            margin-left: 25px;
+            padding: 150px 60px 150px 0;
+            &--par {
+                h2 {
+                    margin-bottom: 40px;
+                }
+                h3 {
+                    margin: 50px 0 30px 0;
+                    color: $color-orange;
+                }
+                ul {
+                    list-style: none;
+                    padding-left: 20px;
+                    margin-top: 10px;
+                    li {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        &::before {
+                            content: '';
+                            width: 7px;
+                            height: 7px;
+                            background-color: $color-dark;
+                            left: -15px;
+                            position: absolute;
+                            clip-path: polygon(0 0, 0% 100%, 100% 50%);
+
+                        }
+                    }
+                }
+                .contact-section {
+                    &__contact-item {
+                        margin-bottom: 25px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        a {
+                            color: $color-dark;
+                            display: flex;
+                            align-items: center;
+                            i {
+                                margin-right: 25px;
+                                font-size: 25px;
+                            }
+                            span {
+                                font-size: 3rem;
+                            }
+                        }
+                    }
+                    &__adress {
+                        span {
+                            font-size: 3rem;
+                            display: block;
+                            &:first-child {
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        &__img {
+            max-width: 1024px;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        
+    }
+}
+
+
+
+.offert-information-2 {
+    background-color: $color-super-light-dark;
+    color: $color-white;
+    &-content {
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+        max-width: 1920px;
+        &__text {
+            max-width: 660px;
+            margin-right: 25px;
+            padding: 150px 0 150px 60px;
+            &--par {
+                h2 {
+                    margin-bottom: 40px;
+                    color: $color-white;
+                }
+                ul {
+                    padding: 0;
+                    margin-top: 0;
+                    list-style: none;
+                    li {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+                .last-par {
+                    margin-top: 60px;
+                }
+                p {
+                    &:last-child {
+                        margin-top: 60px;
+                    }
+                }
+                .arrow-list {
+                    list-style: none;
+                    padding-left: 20px;
+                    margin-top: 10px;
+                    li {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        &::before {
+                            content: '';
+                            display: block;
+                            width: 7px;
+                            height: 7px;
+                            background-color: $color-white;
+                            top: 9px;
+                            left: -15px;
+                            position: absolute;
+                            clip-path: polygon(0 0, 0% 100%, 100% 50%);
+
+                        }
+                    }
+                }
+            }
+        }
+        &__img {
+            max-width: 1024px;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+    }
+}
+
+
+@include break-point-down(md) {
+    .offert-information {
+        &-content {
+            flex-direction: column;
+            &__text {
+                max-width: 100%;
+                margin-left: 0;
+                padding: 100px 25px;
+            }
+            &__img  {
+                max-width: 100%;
+                height: 700px;
+            }
+            
+        }
+    }
+    .offert-information-2 {
+        &-content {
+            flex-direction: column-reverse;
+            &__text {
+                max-width: 100%;
+                margin-right: 0;
+                padding: 100px 25px;
+            }
+            &__img  {
+                max-width: 100%;
+                height: 700px;
+            }
+        }   
+    }
+}
+
+@include break-point-down(mb) {
+    .offert-information {
+        &-content {
+            &__text {
+                padding: 50px 15px;
+                &--par {
+                    h2 {
+                        margin-bottom: 30px;
+                    }
+                    h3 {
+                        margin: 40px 0 30px 0;
+                    }
+                }
+            }
+            &__img  {
+                height: 360px;
+            }
+            .contact-section {
+                &__contact-item {
+                    margin-bottom: 15px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    a {
+                        
+                        span {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+                &__adress {
+                    span {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    .offert-information-2 {
+        &-content {
+            flex-direction: column-reverse;
+            &__text {
+                padding: 50px 15px;
+                &--par {
+                    h2 {
+                        margin-bottom: 30px;
+                    }
+                    .last-par {
+                        margin-top: 40px;
+                    }
+                    p {
+                        &:last-child {
+                            margin-top: 40px;
+                        }
+                    }
+                }
+            }
+            &__img  {
+                height: 360px;
+            }
+        }   
+    }
+}
+
+
+.offert-information {
+    &-content {
+        #item-monitoring-1 {
+            background-image: url('../../assets/imgs/offert/monitoring/img-1.jpg');
+        }
+        #item-electric-1 {
+            background-image: url('../../assets/imgs/offert/electric/img-1.jpg');
+        }
+        #item-gates-1 {
+            background-image: url('../../assets/imgs/offert/gates/img-1.jpg');
+        }
+        #item-lan-1 {
+            background-image: url('../../assets/imgs/offert/lan/img-1.jpg');
+        }
+        #item-optical-fiber-1 {
+            background-image: url('../../assets/imgs/offert/optical-fiber/img-1.jpg');
+        }
+        #item-tv-1 {
+            background-image: url('../../assets/imgs/offert/tv/img-1.jpg');
+        }
+        #item-contact-1 {
+            background-image: url('../../assets/imgs/offert/contact/img-1.jpg');
+        }
+    }
+}
+
+.offert-information-2 {
+    &-content {
+        #item-monitoring-2 {
+            background-image: url('../../assets/imgs/offert/monitoring/img-2.jpg');
+        }
+        #item-electric-2 {
+            background-image: url('../../assets/imgs/offert/electric/img-2.jpg');
+        }
+        #item-gates-2 {
+            background-image: url('../../assets/imgs/offert/gates/img-2.jpg');
+        }
+        #item-lan-2 {
+            background-image: url('../../assets/imgs/offert/lan/img-2.jpg');
+        }
+        #item-optical-fiber-2 {
+            background-image: url('../../assets/imgs/offert/optical-fiber/img-2.jpg');
+        }
+        #item-tv-2 {
+            background-image: url('../../assets/imgs/offert/tv/img-2.jpg');
+        }
+    }
+}

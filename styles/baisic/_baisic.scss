@@ -1,0 +1,31 @@
+body, html {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    scroll-behavior: smooth;
+    color: $color-dark;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+body::-webkit-scrollbar {
+    width: 15px;
+    background: $color-oragne-dark;
+  }
+body::-webkit-scrollbar-thumb {
+    background: $color-orange;
+    
+}

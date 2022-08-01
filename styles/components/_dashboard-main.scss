@@ -1,0 +1,110 @@
+.dashboard-main {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    .swiper-container {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        .swiper-slide {
+            overflow: hidden;
+            width: 100%;
+            .container {
+                height: 100%;
+            }
+            &__content {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                z-index: 10;
+                color: $color-white;
+                padding-left: 60px;
+                
+                &--heading {
+                    overflow: hidden;
+                    h1 {
+                        transform: translateY(100%);
+                    }
+                }
+                &--subtext {
+                    margin-top: 40px;
+                    max-width: 600px;
+                    overflow: hidden;
+                }
+                &--button {
+                    margin-top: 70px;
+                    overflow: hidden;
+                }
+                .slide-animate {
+                    a {
+                        transform: translateY(102%);
+                    }
+                    p {
+                        transform: translateY(100%);
+                    }
+                }
+            }
+            .slide-inner {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-size: cover;
+                background-position: center;
+                &::before {
+                    content: '';
+                    background-color: rgba($color: $color-black, $alpha: .5);
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .nav-container {
+            width: 200px;
+            left: 50%;
+            bottom: 10%;
+            transform: translateX(-50%);
+            position: absolute;
+            z-index: 10;
+            opacity: 0;
+            .swiper-button-white {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $color-orange;
+                border-radius: 50%;
+                transition: .2s;
+                &::after {
+                    display: none;
+                }
+                i {
+                    color: $color-white;
+                    font-size: 20px;
+                }
+                &:hover {
+                    background-color: $color-oragne-dark;
+                }
+            }
+        }
+    }
+}
+
+@include break-point-down(md) {
+    .dashboard-main {
+        .swiper-container {
+            .swiper-slide {
+                &__content {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}

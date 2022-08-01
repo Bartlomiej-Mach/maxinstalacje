@@ -1,0 +1,100 @@
+.contact-form {
+    margin: 150px 0;
+    &-content {
+        width: 100%;
+        display: flex;
+        background-color: $color-light-white;
+        border-radius: 30px;
+        overflow: hidden;
+        &__img {
+            width: 100%;
+            
+            max-width: 640px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('../../assets/imgs/contact/form-1.jpg');
+        }
+        &__form {
+            width: 100%;
+            padding: 100px 25px;
+            &--contact-form {
+                width: 100%;
+                max-width: 550px;
+                margin: 0 auto;
+                h2 {
+                    margin-bottom: 65px;
+                }
+                .input-container {
+                    margin-bottom: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    span {
+                        text-transform: uppercase;
+                        margin-bottom: 10px;
+                    }
+                    input, textarea {
+                        border: none;
+                        background-color: $color-white;
+                        padding: 12px 15px;
+                        width: 100%;
+                        border-bottom: 1px solid $color-orange;
+                        font-family: $font-montserrat;
+                        font-size: $font-text;
+                        resize: none;
+                        &:focus {
+                            outline-color: rgb(42, 105, 221);
+                        }
+                    }
+                    textarea {
+                        height: 350px;
+                    }
+                    
+                }
+                .submit-form {
+                    border: none;
+                    background-color: none;
+                }
+            }
+        }
+    }
+}
+
+
+@include break-point-down(824) {
+    .contact-form {
+        margin: 100px 0;
+        &-content {
+            flex-direction: column;
+            &__img {
+                display: none;
+            }
+            &__form {
+                &--contact-form {
+                    max-width: 100%;
+                }   
+            }
+        }
+    }
+}
+
+@include break-point-down(mb) {
+    .contact-form {
+        margin: 50px 0;
+        &-content {
+            &__form {
+                padding: 50px 15px;
+                &--contact-form {
+                    .input-container {
+                        input {
+                            font-size: $font-text-mobile;
+                        }
+                    }
+                }   
+            }
+        }
+    }
+}
