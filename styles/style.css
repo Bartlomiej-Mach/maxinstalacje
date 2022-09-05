@@ -2050,6 +2050,7 @@ body::-webkit-scrollbar-thumb {
 .contact-form-content__form--contact-form .submit-form {
   border: none;
   background-color: none;
+  cursor: pointer;
 }
 
 @media (max-width: 824px) {
