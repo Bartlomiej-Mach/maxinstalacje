@@ -1,0 +1,51 @@
+.success-page {
+    width: 100%;
+    height: 100vh;
+    min-height: 900px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    &__img {
+        width: 50%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('../../assets/imgs/contact/success.jpg');
+    }
+    &__text {
+        padding: 0 40px;
+        h1 {
+            color: $color-orange;
+        }
+        &--p {
+            max-width: 650px;
+            font-size: 3rem;
+            display: block;
+            margin: 40px 0;
+        }
+    }
+}
+
+@include break-point-down(mb) {
+    .success-page {
+        flex-direction: column-reverse;
+        justify-content: center;
+        &__img {
+            height: 50%;
+            width: 100%;
+        }
+        &__text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 50%;
+            padding-top: 100px;
+            padding: 0 25px;
+            &--p {
+                font-size: 2rem;
+                margin: 30px 0;
+            }
+        }
+    }
+}

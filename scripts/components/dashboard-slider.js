@@ -24,7 +24,7 @@ class DashboardMain {
             mousewheelControl: true,
             keyboardControl: true,
             navigation: {
-              nextel:+48794013505 ".swiper-button-next",
+              nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev"
             },
         };
